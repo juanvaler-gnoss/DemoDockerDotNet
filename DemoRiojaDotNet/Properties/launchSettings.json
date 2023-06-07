@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DemoRiojaDotNet": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
