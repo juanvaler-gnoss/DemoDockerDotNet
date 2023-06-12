@@ -12,7 +12,7 @@
 using System;
 using System.Diagnostics;
 
-Console.WriteLine("Introduce la imagen a descargar: ");
+Console.WriteLine("Introduce la url a descargar: ");
 string url = Console.ReadLine();
 
 string name = url.Substring(url.LastIndexOf('/') + 1);

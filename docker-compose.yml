@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+        
+  download:
+    image: demo-dockerdotnet
+    environment:
+     OutputFolder: "downloads"
+    volumes:
+      - /home/gnoss/demo-riojadotnet/output:/app/downloads
