@@ -9,8 +9,6 @@ services:
      DownloadUrl: "http://web/home"
     volumes:
       - /home/gnoss/demo-riojadotnet/output:/app/downloads
-    #depends_on:
-    #  - web
 
   web:
     image: docker.gnoss.com/demo-dockerweb:1.1
