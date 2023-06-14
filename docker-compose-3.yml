@@ -9,8 +9,17 @@ services:
      DownloadUrl: "http://web/home"
     volumes:
       - /home/gnoss/demo-riojadotnet/output:/app/downloads
-    #depends_on:
-    #  - web
+    depends_on:
+      web:
+        condition: service_healthy
 
   web:
     image: docker.gnoss.com/demo-dockerweb:1.1
+    ports: 
+    - 9000:80
+    healthcheck:
+      test: curl --fail http://localhost || exit 1
+      interval: 2s
+      retries: 5
+      start_period: 2s
+      timeout: 2s
