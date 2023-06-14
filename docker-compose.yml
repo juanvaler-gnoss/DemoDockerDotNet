@@ -3,8 +3,9 @@ version: '3.8'
 services:
         
   download:
-    image: demo-dockerdotnet
+    image: docker.gnoss.com/demo-dockerdotnet:1.0
     environment:
      OutputFolder: "downloads"
+     DownloadUrl: "https://d1.awsstatic.com/acs/characters/Logos/Docker-Logo_Horizontel_279x131.b8a5c41e56b77706656d61080f6a0217a3ba356d.png"
     volumes:
       - /home/gnoss/demo-riojadotnet/output:/app/downloads

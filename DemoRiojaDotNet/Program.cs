@@ -15,6 +15,11 @@ using System.Diagnostics;
 Console.WriteLine("Introduce la url a descargar: ");
 string url = Console.ReadLine();
 
+if (string.IsNullOrEmpty(url))
+{
+    url = Environment.GetEnvironmentVariable("DownloadUrl");
+}
+
 string name = url.Substring(url.LastIndexOf('/') + 1);
 string folder = Environment.GetEnvironmentVariable("OutputFolder");
 if (string.IsNullOrEmpty(folder))
